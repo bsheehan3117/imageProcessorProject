@@ -1,0 +1,165 @@
+Commands to run the program:
+
+**Important**
+
+Running a script file:
+
+-file fileName
+(eg. -file res/script.txt)
+
+
+Running a script file from Jar file:
+java -jar HW9.jar -file script.txt
+
+**
+
+
+**Running the GUI**
+
+To open the GUI:
+
+-Run the main program with no command line arguments.
+
+To load an image:
+
+-Options to load include:
+    -PPM
+    -JPG
+    -BMP
+    -PNG
+
+-Click on the button indicating the type of image you would like to load. A window will open allowing you to select a file.  The image will appear in the window if correctly loaded.
+-Be sure to click on the correct load button that matches the file type.
+
+To Edit an image:
+
+-Options to edit include...
+    -Blur
+    -Sharpen
+    -Value
+    -Intensity
+    -Blue Greyscale
+    -Red Greyscale
+    -Green Greyscale
+    -Darken (Must have increment int)
+    -Brighten (Must have increment int)
+    -Luma
+
+-Click on the button that matches the transformation you would like to use on the right side of the GUI window.
+-If you would like to brighten or darken an image, type an integer in the text box on the bottom right corner before clicking brighten or darken.  This will be the value of how much to brighten or darken the image.
+-The updated image will appear in the center of the window.
+
+To Save an Image:
+
+-Options to save include:
+    -PPM
+    -JPG
+    -BMP
+    -PNG
+
+-Ensure that the image you want to save is currently displayed inside the window, transformed to how you would like it.
+-Click on the save button on the left side of the window with the preferred file type that you would like to save as.
+-A window will pop up allowing you to name the file and choose a location to save it.
+-Click save.
+
+To Exit the Program:
+Click the "x" in the top right corner of the window.
+
+
+**Instructions for Interactive Mode**
+
+-Load an image PPM file:
+
+loadppm path/to/image.ppm ImageName
+
+-Save an image to a PPM file:
+
+saveppm path/to/save/image.ppm ImageName
+
+-Load an image PNG file:
+
+loadpng path/to/image.png ImageName
+
+-Save an image to a PNG file:
+
+-savepng path/to/save/image.png ImageName
+
+-Load an image JPG file:
+
+loadjpg path/to/image.jpg ImageName
+
+-Save an image to a PPM file:
+
+savejpg path/to/save/image.jpg ImageName
+
+-Load an image BMP file:
+
+loadbmp path/to/image.bmp ImageName
+
+-Save an image to a BMP file:
+
+savebmp path/to/save/image.bmp ImageName
+
+-Transform with Brighten:
+
+brighten IncrementValue SourceImageName DestImageName
+
+-Transform with darken:
+
+darken DecrementValue SourceImageName DestImageName
+
+-Transform with value:
+
+value SourceImageName DestImageName
+
+-Transform with intensity:
+
+intensity SourceImageName DestImageName
+
+-Transform with Luma:
+
+luma SourceImageName DestImageName
+
+-Convert to greyscale with red:
+
+rcomponent SourceImageName DestImageName
+
+-Convert to greyscale with green:
+
+gcomponent SourceImageName DestImageName
+
+-Convert to greyscale with Blue:
+
+bcomponent SourceImageName DestImageName
+
+-Transform with Sharpen:
+
+sharpen SourceImageName DestImageName
+
+-Transform with blur:
+
+blur SourceImageName DestImageName
+
+-Exit:
+
+exit
+
+
+
+An example script for loading a sample image, creating a brightened image from
+the sample image, saving the brightened image, and exiting the program:
+
+
+Enter command: load res\sampleimage.ppm sampleimage
+
+Image 'sampleimage' loaded successfully.
+
+Enter command: brighten 25 sampleimage brighterimage
+
+Transformation 'brighten' applied successfully to create image: brighterimage
+
+Enter command: save res\brighterimage.ppm brighterimage
+
+Image 'brighterimage' saved successfully to: res\brighterimage.ppm
+
+Enter command: exit
